@@ -40,7 +40,7 @@
   <h3>Installation</h3>
   <ol>
     <li><strong>Cloner le dépôt :</strong></li>
-    <pre><code>git clone https://github.com/ton-nom-d-utilisateur/movie-list-project.git</code></pre>
+    <pre><code>git clone https://github.com/EyaSomaii/react-interview-movies/tree/main </code></pre>
     <li><strong>Naviguer dans le répertoire du projet :</strong></li>
     <pre><code>cd movie-list-project</code></pre>
     <li><strong>Installer les dépendances :</strong></li>
