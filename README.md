@@ -31,11 +31,7 @@
 
 <div class="section">
   <h2>Configuration</h2>
-  <h3>Prérequis</h3>
-  <p>Assure-toi d'avoir les éléments suivants installés :</p>
-  <ul>
-    <li>Node.js (>= 14.x)</li>
-    <li>npm (>= 6.x)</li>
+ 
   </ul>
   <h3>Installation</h3>
   <ol>
