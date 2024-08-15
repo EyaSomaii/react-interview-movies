@@ -1,15 +1,21 @@
 import React, { useState } from "react";
-import { Box, Text, Progress, Button ,HStack} from "@chakra-ui/react";
+import { Box, Text, Progress, Button, HStack } from "@chakra-ui/react";
 
-export const MovieCard = ({ title, category, initialLikes, initialDislikes, onDelete }) => {
+export const MovieCard = ({
+  title,
+  category,
+  initialLikes,
+  initialDislikes,
+  onDelete,
+}) => {
   const [likes, setLikes] = useState(initialLikes);
   const [dislikes, setDislikes] = useState(initialDislikes);
-  const [isLiked, setIsLiked] = useState(null); 
+  const [isLiked, setIsLiked] = useState(null);
 
   const total = likes + dislikes;
   const likePercentage = total > 0 ? (likes / total) * 100 : 0;
 
-  const handleToggleLikeDislike = () => {
+  const ToggeleLikeDislike = () => {
     if (isLiked === true) {
       setLikes(likes - 1);
       setDislikes(dislikes + 1);
@@ -50,15 +56,16 @@ export const MovieCard = ({ title, category, initialLikes, initialDislikes, onDe
         <Button variant="solid" colorScheme="red" onClick={onDelete}>
           Delete
         </Button>
-      <Button
-        variant="outline"
-        colorScheme={isLiked === true ? "green" : isLiked === false ? "red" : "gray"}
-        onClick={handleToggleLikeDislike}
-      >
-        {isLiked === true ? "Dislike" : "Like"}
-      </Button>
+        <Button
+          variant="outline"
+          colorScheme={
+            isLiked === true ? "green" : isLiked === false ? "red" : "gray"
+          }
+          onClick={ToggeleLikeDislike}
+        >
+          {isLiked === true ? "Dislike" : "Like"}
+        </Button>
       </HStack>
-
     </Box>
   );
 };
